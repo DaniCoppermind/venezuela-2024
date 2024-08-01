@@ -10,7 +10,9 @@ import {getContactList} from "@/services/getContactList"
 import {getRegionList} from "@/services/getRegionList"
 
 const regions_arr = await getRegionList()
+console.log(regions_arr)
 const regions = [...new Set(sortRegion(regions_arr).map((e) => e.region))]
+console.log(regions)
 const reg = Astro.url.searchParams.get("reg") ?? null
 ---
 <Layout title="Venezuela Help 2024">
